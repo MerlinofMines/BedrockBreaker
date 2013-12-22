@@ -132,6 +132,7 @@ public class BedrockBreaker extends JavaPlugin {
 			getServer().broadcastMessage("Error loading command library: " + e.getMessage());
 		}
 
+		//Comment
 		this.saveDefaultConfig();
 
 		this.getConfig().options().copyDefaults(true);
