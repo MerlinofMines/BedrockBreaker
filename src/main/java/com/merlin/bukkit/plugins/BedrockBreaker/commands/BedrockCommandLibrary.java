@@ -256,6 +256,7 @@ public class BedrockCommandLibrary {
 		showDebugCommands.addPossibility(debugInfoCommand, debugInfoPattern);
 		
 		showBedrockCommands = new ListCommand("List of Bedrock Commands");
+		showBedrockCommands.setDescription("Lists Bedrock Commands");
 		showBedrockCommands.addPossibility(showMineCommands, minePattern);
 		showBedrockCommands.addPossibility(showPlaceCommands, placePattern);
 		showBedrockCommands.addPossibility(showCraftCommands, craftPattern);

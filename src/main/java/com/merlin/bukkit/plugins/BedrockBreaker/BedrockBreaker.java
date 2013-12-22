@@ -71,6 +71,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary;
+import com.merlin.bukkit.plugins.merlin.commands.CommandMetaData;
 import com.merlin.bukkit.plugins.merlin.commands.executors.AdviceCommandLibraryExecutor;
 import com.merlin.bukkit.plugins.merlin.commands.executors.LibraryTabCompleter;
 import com.merlin.bukkit.plugins.merlin.core.commands.libraries.SimpleCommandLibrary;
@@ -78,7 +79,7 @@ import com.merlin.bukkit.plugins.merlin.core.commands.libraries.SimpleCommandLib
 public class BedrockBreaker extends JavaPlugin {
 
 	//Command Library
-    private SimpleCommandLibrary library = new SimpleCommandLibrary();
+    private SimpleCommandLibrary library = new SimpleCommandLibrary(new CommandMetaData(false));
 
 	//ClassListeners
 	private final CommandExecutor commandExecutor = new AdviceCommandLibraryExecutor(library,7);
@@ -165,7 +166,7 @@ public class BedrockBreaker extends JavaPlugin {
 		library.addCommand(bedrockPattern,showBedrockCommands);
 		library.addCommand(minePattern,showMineCommands);
 		library.addCommand(placePattern,showPlaceCommands);
-		library.addCommand(craftPattern, showCraftCommands);
+		library.addCommand(craftPattern,showCraftCommands);
 		library.addCommand(debugPattern,showDebugCommands);
 
 		library.addCommand(miningEnablePattern,miningEnableCommand);

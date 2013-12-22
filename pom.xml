@@ -14,7 +14,7 @@
 		<dependency>
 			<groupId>com.merlin.bukkit.plugins</groupId>
 			<artifactId>merlin-core</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>0.0.5-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
