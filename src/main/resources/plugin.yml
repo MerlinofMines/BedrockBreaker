@@ -1,0 +1,8 @@
+name: BedrockBreaker
+main: com.merlin.bukkit.plugins.BedrockBreaker.BedrockBreaker
+version: 0.1
+
+commands:
+   bedrock:
+      description: Lists BedrockBreaker commands
+      usage: /bedrock

@@ -1,0 +1,14 @@
+mining:
+  enabled: true
+  time: 10000
+  strikes: 20
+  keepAlive: 15000
+  gap: 1000
+  drop: true
+  damage: 100
+placement:
+  enabled: true
+crafting:
+  enabled: true
+debug:
+  enabled: true
