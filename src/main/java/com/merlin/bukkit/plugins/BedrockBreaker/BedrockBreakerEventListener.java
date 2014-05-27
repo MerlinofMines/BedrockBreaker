@@ -37,7 +37,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.inventory.ItemStack;
 
-import com.merlin.bukkit.plugins.merlin.core.permissions.PermissionsUtil;
+import com.merlin.bukkit.plugins.core.permissions.PermissionsUtil;
 
 public class BedrockBreakerEventListener implements Listener {
 

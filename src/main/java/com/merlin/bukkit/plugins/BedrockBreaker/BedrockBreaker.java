@@ -17,46 +17,46 @@ package com.merlin.bukkit.plugins.BedrockBreaker;
     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.bedrockPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.craftPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.craftingEnableCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.craftingEnablePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.craftingInfoCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.craftingInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.debugEnableCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.debugEnablePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.debugInfoCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.debugInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.debugPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.minePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningDamageCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningDamagePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningDropCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningDropPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningEnableCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningEnablePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningGapCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningGapPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningInfoCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningKeepAliveCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningKeepAlivePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningStrikesCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningStrikesPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningTimeCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.miningTimePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.placePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.placingEnableCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.placingEnablePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.placingInfoCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.placingInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.reloadConfigCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.reloadConfigPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.showBedrockCommands;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.showCraftCommands;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.showDebugCommands;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.showMineCommands;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary.showPlaceCommands;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.bedrockPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.craftPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.craftingEnableCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.craftingEnablePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.craftingInfoCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.craftingInfoPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.debugEnableCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.debugEnablePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.debugInfoCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.debugInfoPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.debugPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.minePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningDamageCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningDamagePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningDropCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningDropPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningEnableCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningEnablePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningGapCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningGapPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningInfoCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningInfoPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningKeepAliveCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningKeepAlivePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningStrikesCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningStrikesPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningTimeCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningTimePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingEnableCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingEnablePattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingInfoCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingInfoPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.reloadConfigCommand;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.reloadConfigPattern;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showBedrockCommands;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showCraftCommands;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showDebugCommands;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showMineCommands;
+import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showPlaceCommands;
 
 import java.util.Iterator;
 
@@ -70,11 +70,11 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockCommandLibrary;
-import com.merlin.bukkit.plugins.merlin.commands.CommandMetaData;
-import com.merlin.bukkit.plugins.merlin.commands.executors.AdviceCommandLibraryExecutor;
-import com.merlin.bukkit.plugins.merlin.commands.executors.LibraryTabCompleter;
-import com.merlin.bukkit.plugins.merlin.core.commands.libraries.SimpleCommandLibrary;
+import com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary;
+import com.merlin.bukkit.plugins.core.commands.CommandMetaData;
+import com.merlin.bukkit.plugins.core.commands.executors.AdviceCommandLibraryExecutor;
+import com.merlin.bukkit.plugins.core.commands.executors.LibraryTabCompleter;
+import com.merlin.bukkit.plugins.core.commands.libraries.SimpleCommandLibrary;
 
 public class BedrockBreaker extends JavaPlugin {
 
@@ -82,7 +82,7 @@ public class BedrockBreaker extends JavaPlugin {
     private SimpleCommandLibrary library = new SimpleCommandLibrary(new CommandMetaData(false));
 
 	//ClassListeners
-	private final CommandExecutor commandExecutor = new AdviceCommandLibraryExecutor(library,7);
+	private final CommandExecutor commandExecutor = new AdviceCommandLibraryExecutor(library,5);
 	private final TabCompleter completer = new LibraryTabCompleter(library);
 	private final BedrockBreakerEventListener eventListener = new BedrockBreakerEventListener(this);
 	
@@ -162,7 +162,7 @@ public class BedrockBreaker extends JavaPlugin {
 	}
 	
 	public void loadLibrary() throws Exception {
-		BedrockCommandLibrary.initialize(this);
+		BedrockBreakerCommandLibrary.initialize(this);
 		library.addCommand(bedrockPattern,showBedrockCommands);
 		library.addCommand(minePattern,showMineCommands);
 		library.addCommand(placePattern,showPlaceCommands);

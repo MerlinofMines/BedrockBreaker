@@ -3,8 +3,8 @@ package com.merlin.bukkit.plugins.BedrockBreaker.commands;
 import org.bukkit.command.CommandSender;
 
 import com.merlin.bukkit.plugins.BedrockBreaker.BedrockBreaker;
-import com.merlin.bukkit.plugins.merlin.commands.UpdateConfigurationPropertyCommand;
-import com.merlin.bukkit.plugins.merlin.core.commands.pieces.AffirmationCommandPiece;
+import com.merlin.bukkit.plugins.core.commands.UpdateConfigurationPropertyCommand;
+import com.merlin.bukkit.plugins.core.commands.pieces.AffirmationCommandPiece;
 
 public class RecipeLoaderCommand extends UpdateConfigurationPropertyCommand<AffirmationCommandPiece> {
 
