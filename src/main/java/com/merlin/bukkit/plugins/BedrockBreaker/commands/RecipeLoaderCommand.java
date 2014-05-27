@@ -3,15 +3,16 @@ package com.merlin.bukkit.plugins.BedrockBreaker.commands;
 import org.bukkit.command.CommandSender;
 
 import com.merlin.bukkit.plugins.BedrockBreaker.BedrockBreaker;
-import com.merlin.bukkit.plugins.merlin.commands.UpdateConfigurationPropertyCommand;
-import com.merlin.bukkit.plugins.merlin.core.commands.pieces.AffirmationCommandPiece;
+import com.merlin.bukkit.plugins.core.commands.UpdateConfigurationPropertyCommand;
+import com.merlin.bukkit.plugins.core.commands.hooks.PersistableHook;
+import com.merlin.bukkit.plugins.core.path.Path;
 
-public class RecipeLoaderCommand extends UpdateConfigurationPropertyCommand<AffirmationCommandPiece> {
+public class RecipeLoaderCommand extends UpdateConfigurationPropertyCommand<Boolean> {
 
 	private BedrockBreaker breaker;
 	
-	public RecipeLoaderCommand(BedrockBreaker plugin,AffirmationCommandPiece commandPiece, String propertyPath) {
-		super(plugin, commandPiece, propertyPath);
+	public RecipeLoaderCommand(BedrockBreaker plugin,PersistableHook<Boolean> hook, Path propertyPath) {
+		super(plugin, propertyPath, hook);
 		this.breaker = plugin;
 	}
 	

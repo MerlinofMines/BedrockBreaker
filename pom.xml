@@ -4,17 +4,18 @@
 	<groupId>com.merlin.bukkit.plugins</groupId>
 	<artifactId>BedrockBreaker</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>BedrockBreaker</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<minecraft.server.plugins.folder>C:\Users\Aaron\Games\Minecraft\Server\plugins</minecraft.server.plugins.folder>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.merlin.bukkit.plugins</groupId>
 			<artifactId>merlin-core</artifactId>
-			<version>0.0.5-SNAPSHOT</version>
+		<version>1.0.3-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -47,7 +48,28 @@
 								</includes>
 							</artifactSet>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
-							<finalName>BedrockBreaker</finalName>
+							<outputDirectory>${project.build.directory}/final</outputDirectory>
+							<outputFile>${project.build.directory}/final/BedrockBreaker.jar</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${minecraft.server.plugins.folder}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.build.directory}/final</directory>
+								</resource>
+							</resources>
 						</configuration>
 					</execution>
 				</executions>
