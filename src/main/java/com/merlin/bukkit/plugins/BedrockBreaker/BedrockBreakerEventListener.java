@@ -64,7 +64,7 @@ public class BedrockBreakerEventListener implements Listener {
 			}
 			
 			if(!PermissionsUtil.hasPermission(event.getPlayer(),"bedrock.place")) {
-//				event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('\u0026',"&4You do not have permission to place bedrock"));
+				event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('\u0026',"&4You do not have permission to place bedrock"));
 				event.setCancelled(true);
 				return;
 			}
@@ -73,18 +73,13 @@ public class BedrockBreakerEventListener implements Listener {
 	
 	@EventHandler
 	public void onBlockDamage(BlockDamageEvent event) {
-		if(event.getBlock().getType().equals(Material.BEDROCK)) {
+		if(event.getBlock().getType().equals(Material.BEDROCK) && event.getPlayer().getItemInHand().getType()==Material.DIAMOND_PICKAXE) {
 			if(!plugin.getConfig().getBoolean(plugin.MINING_ENABLED)) {
 				return;
 			}
-
-			Material material = Material.getMaterial(plugin.getConfig().getString("mining.tool"));
-			if(material== null || !event.getPlayer().getItemInHand().getType().equals(material)) {
-				return;
-			}
 			
-			if(!PermissionsUtil.hasPermission(event.getPlayer(),"bedrock.mine")) {
-//				event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('\u0026',"&4You do not have permission to mine bedrock."));
+			if(!!PermissionsUtil.hasPermission(event.getPlayer(),"bedrock.mine")) {
+				event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('\u0026',"&4You do not have permission to mine bedrock."));
 				return;
 			}
 

@@ -387,5 +387,4 @@ public class BedrockBreakerCommandLibrary {
 		showBedrockCommands.addPossibility(playerTPCommand, playerTPCommandPieces);
 
 	}
-	
 }

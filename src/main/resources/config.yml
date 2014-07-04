@@ -1,20 +1,11 @@
 mining:
   enabled: true
+  time: 10000
+  strikes: 20
   keepAlive: 15000
   gap: 1000
-  tools:
-    DIAMOND_PICKAXE:
-      enabled: true
-      time: 10000
-      strikes: 10
-      damage: 10
-      drop: true
-    IRON_PICKAXE:
-      enabled: false
-      time: 10000
-      strikes: 20
-      damage: 20
-      drop: true
+  drop: true
+  damage: 100
 placement:
   enabled: true
 crafting:

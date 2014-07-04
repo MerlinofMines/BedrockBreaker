@@ -5,14 +5,14 @@ import org.bukkit.command.CommandSender;
 import com.merlin.bukkit.plugins.BedrockBreaker.BedrockBreaker;
 import com.merlin.bukkit.plugins.core.commands.UpdateConfigurationPropertyCommand;
 import com.merlin.bukkit.plugins.core.commands.hooks.PersistableHook;
-import com.merlin.bukkit.plugins.core.path.Path;
+import com.merlin.bukkit.plugins.core.path.ConfigurationPath;
 
 public class RecipeLoaderCommand extends UpdateConfigurationPropertyCommand<Boolean> {
 
 	private BedrockBreaker breaker;
 	
-	public RecipeLoaderCommand(BedrockBreaker plugin,PersistableHook<Boolean> hook, Path propertyPath) {
-		super(plugin, propertyPath, hook);
+	public RecipeLoaderCommand(BedrockBreaker plugin,PersistableHook<Boolean> commandPiece, ConfigurationPath propertyPath) {
+		super(plugin,propertyPath,commandPiece);
 		this.breaker = plugin;
 	}
 	

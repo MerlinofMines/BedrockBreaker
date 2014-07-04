@@ -45,21 +45,11 @@ import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCo
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningStrikesPattern;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningTimeCommand;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningTimePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolEnableCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolEnablePattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolInfoCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolManageCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.miningToolManagePattern;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placePattern;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingEnableCommand;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingEnablePattern;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingInfoCommand;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.placingInfoPattern;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.playerKillCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.playerKillCommandPieces;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.playerTPCommand;
-import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.playerTPCommandPieces;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.reloadConfigCommand;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.reloadConfigPattern;
 import static com.merlin.bukkit.plugins.BedrockBreaker.commands.BedrockBreakerCommandLibrary.showBedrockCommands;
@@ -92,7 +82,7 @@ public class BedrockBreaker extends JavaPlugin {
     private SimpleCommandLibrary library = new SimpleCommandLibrary(new CommandMetaData(false));
 
 	//ClassListeners
-	private final CommandExecutor commandExecutor = new AdviceCommandLibraryExecutor(library,5);
+	private final CommandExecutor commandExecutor = new AdviceCommandLibraryExecutor(library,7);
 	private final TabCompleter completer = new LibraryTabCompleter(library);
 	private final BedrockBreakerEventListener eventListener = new BedrockBreakerEventListener(this);
 	
@@ -132,7 +122,7 @@ public class BedrockBreaker extends JavaPlugin {
 		// just call pm.registerEvents() on an instance of each class
 		pm.registerEvents(eventListener, this);
 		
-		// do any other initialization you need here...
+		// do any other initialisation you need here...
 		BedrockBreakerTickTracker.reset();
 
 		loadRecipes();
@@ -143,9 +133,10 @@ public class BedrockBreaker extends JavaPlugin {
 			getServer().broadcastMessage("Error loading command library: " + e.getMessage());
 		}
 
+		//Comment
 		this.saveDefaultConfig();
-		this.getConfig().options().copyDefaults(true);
 
+		this.getConfig().options().copyDefaults(true);
 	}
 	
 	public void loadRecipes() {
@@ -185,7 +176,6 @@ public class BedrockBreaker extends JavaPlugin {
 		library.addCommand(miningDropPattern,miningDropCommand);
 		library.addCommand(miningGapPattern,miningGapCommand);
 		library.addCommand(miningInfoPattern,miningInfoCommand);
-		library.addCommand(miningToolInfoPattern,miningToolInfoCommand);
 		library.addCommand(miningTimePattern,miningTimeCommand);
 		
 		library.addCommand(placingEnablePattern,placingEnableCommand);
@@ -197,12 +187,6 @@ public class BedrockBreaker extends JavaPlugin {
 		library.addCommand(debugEnablePattern, debugEnableCommand);
 		library.addCommand(debugInfoPattern,debugInfoCommand);
 
-		library.addCommand(playerKillCommandPieces,playerKillCommand);
-		library.addCommand(playerTPCommandPieces,playerTPCommand);
-		
 		library.addCommand(reloadConfigPattern,reloadConfigCommand);		
-		
-		library.addCommand(miningToolManagePattern,miningToolManageCommand);
-		library.addCommand(miningToolEnablePattern,miningToolEnableCommand);
 	}
 }
